@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/orange_big.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/medium.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Backgrounds/backgroundColorFall.png" type="Texture" id=3]
+[ext_resource path="res://scripts/main_menu.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1029.0
+margin_bottom = 603.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 1024.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 294.607
+margin_top = 96.3571
+margin_right = 761.607
+margin_bottom = 216.357
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.690196, 0.427451, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.670588, 0.47451, 1 )
+custom_colors/font_color_shadow = Color( 0.447059, 0.352941, 0.262745, 1 )
+text = "Langkitang"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="new_game_btn" type="LinkButton" parent="."]
+margin_left = 401.113
+margin_top = 272.678
+margin_right = 748.113
+margin_bottom = 328.678
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.647059, 0.447059, 0.0156863, 1 )
+toggle_mode = true
+text = "New Game"
+underline = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="load_game_btn" type="LinkButton" parent="."]
+margin_left = 387.448
+margin_top = 341.458
+margin_right = 758.448
+margin_bottom = 397.458
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.647059, 0.447059, 0.0156863, 1 )
+toggle_mode = true
+text = "Load Game"
+underline = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="new_game_btn" to="new_game_btn" method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="load_game_btn" to="new_game_btn" method="_on_load_game_btn_pressed"]
