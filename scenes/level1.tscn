@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tilesets/autumn_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/main_char.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Backgrounds/backgroundColorFall.png" type="Texture" id=3]
 [ext_resource path="res://scenes/zombie.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Life Counter.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 
@@ -32,3 +33,9 @@ centered = false
 
 [node name="Zombie" parent="." instance=ExtResource( 2 )]
 position = Vector2( 16.818, -104.271 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 20.0
+margin_top = 20.0

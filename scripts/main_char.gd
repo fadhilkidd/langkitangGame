@@ -13,6 +13,7 @@ var animation = "diem_kanan"
 
 func get_input():
 	velocity.x = 0
+	speed = 300
 	if is_on_floor():
 		doubleJump = 0
 		animation = "diam"
@@ -20,6 +21,12 @@ func get_input():
 			animation = "jalan"
 		if Input.is_action_pressed("ui_left"):
 			animation = "jalan"
+		if Input.is_key_pressed(KEY_SHIFT) and Input.is_action_pressed("ui_right"):
+			animation = "lari"
+			speed = 500
+		if Input.is_key_pressed(KEY_SHIFT) and Input.is_action_pressed("ui_left"):
+			animation = "lari"
+			speed = 500
 	if is_on_floor() and Input.is_action_just_pressed('ui_up'):
 		velocity.y = jump_speed
 		$JumpSound.play()
@@ -33,8 +40,8 @@ func get_input():
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= speed
 	
-	if $AnimatedSprite2.animation != animation:
-		$AnimatedSprite2.play(animation)
+	if $AnimatedSprite.animation != animation:
+		$AnimatedSprite.play(animation)
 
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
@@ -47,6 +54,6 @@ func _process(delta):
 	if velocity.y > 0:
 		animation = 'mendarat'
 	if velocity.x > 0:
-		$AnimatedSprite2.flip_h = false
+		$AnimatedSprite.flip_h = false
 	if velocity.x < 0:
-		$AnimatedSprite2.flip_h = true 
+		$AnimatedSprite.flip_h = true 
