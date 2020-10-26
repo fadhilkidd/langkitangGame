@@ -85,6 +85,11 @@ animations = [ {
 "name": "mati",
 "speed": 15.0
 }, {
+"frames": [ ExtResource( 24 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": false,
+"name": "mendarat",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 65 ), ExtResource( 66 ), ExtResource( 6 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 23 ) ],
 "loop": false,
 "name": "lompat",
@@ -94,11 +99,6 @@ animations = [ {
 "loop": true,
 "name": "jalan",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 70 ) ],
-"loop": false,
-"name": "mendarat",
-"speed": 15.0
 }, {
 "frames": [ ExtResource( 61 ), ExtResource( 73 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 7 ) ],
 "loop": true,
@@ -135,3 +135,4 @@ volume_db = -19.184
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 332.814, 395.612 )
 current = true
+zoom = Vector2( 1.5, 1.5 )
