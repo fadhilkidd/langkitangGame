@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Be Kind"
-run/main_scene="res://scenes/level1.tscn"
+run/main_scene="res://scenes/Main Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
 
 [rendering]
 

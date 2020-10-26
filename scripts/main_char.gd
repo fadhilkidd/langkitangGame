@@ -11,6 +11,8 @@ var velocity = Vector2()
 
 var animation = "diam"
 
+var is_dead = false
+
 func get_input():
 	velocity.x = 0
 	speed = 300
@@ -49,9 +51,31 @@ func get_input():
 		$AnimatedSprite.play(animation)
 
 func _physics_process(delta):
-	velocity.y += delta * GRAVITY
-	get_input()
-	velocity = move_and_slide(velocity, UP)
+	if is_dead == false:
+		velocity.y += delta * GRAVITY
+		get_input()
+		velocity = move_and_slide(velocity, UP)
+		
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "Enemy" in get_slide_collision(i).collider.name:
+					Global.lives -= 1
+					dead()
+					if Global.lives == 0:
+						real_dead()
+					else:
+						temporary_dead()
+		
+func dead():
+	is_dead = true
+	$AnimatedSprite.play("mati")
+	$CollisionShape2D.disabled = true
+
+func real_dead():
+	$Timer.start()
+	
+func temporary_dead():
+	$Timer2.start()
 	
 func _process(delta):
 	if velocity.y < 0:
@@ -62,3 +86,13 @@ func _process(delta):
 		$AnimatedSprite.flip_h = false
 	if velocity.x < 0:
 		$AnimatedSprite.flip_h = true 
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://scenes/GameOver.tscn")
+
+
+func _on_Timer2_timeout():
+	Global.current_scene = get_tree().get_current_scene().get_name()
+	get_tree().change_scene(str("res://scenes/" + Global.current_scene + ".tscn"))
+	#get_tree().change_scene(str("res://scenes/TryAgain.tscn"))

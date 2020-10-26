@@ -16,27 +16,33 @@ region = Rect2( 80, 110, 80, 110 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
-"loop": true,
-"name": "jalan",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "diam",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "jalan",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 26.0243, 43.3657 )
+extents = Vector2( 33.1601, 51.0955 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 3 )
 animation = "diam"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.594604, 11.2975 )
+position = Vector2( 0.297302, 14.2705 )
 shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 33.9411, 28.2843 )
+enabled = true
+cast_to = Vector2( 0, 38 )

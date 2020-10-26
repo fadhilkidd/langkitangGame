@@ -1,15 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tilesets/autumn_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/main_char.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Backgrounds/backgroundColorFall.png" type="Texture" id=3]
 [ext_resource path="res://scenes/zombie.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Life Counter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/DieArea.tscn" type="PackedScene" id=6]
 
-[node name="Main" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2153.66, 659.323 )
+[node name="level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.2, 0.2 )
@@ -30,11 +28,30 @@ scale = Vector2( 3.36506, 1.7888 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Zombie" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 16.818, -104.271 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2139.07, 652.027 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5993.5, 784.065 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12921.8, 1724.1 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6357.63, 404.086 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MarginContainer" parent="CanvasLayer" instance=ExtResource( 5 )]
-margin_left = 20.0
-margin_top = 20.0
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5281.64, 1813.87 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9748.63, 2515.96 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 14575.1, 2515.19 )
