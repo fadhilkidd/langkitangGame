@@ -1,18 +1,62 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/fonts/medium.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/life_counter.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Kecil.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scripts/Pause.gd" type="Script" id=4]
 
-[node name="MarginContainer" type="MarginContainer"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="MarginContainer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_right = 201.0
-margin_bottom = 42.0
+[node name="PauseGUI" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PauseGUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.054902, 0.054902, 0.054902, 0.301961 )
+
+[node name="Label2" type="Label" parent="PauseGUI"]
+margin_left = 405.695
+margin_top = 282.223
+margin_right = 606.695
+margin_bottom = 324.223
+custom_fonts/font = ExtResource( 1 )
+text = "Paused"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseGUI"]
+margin_left = 327.58
+margin_top = 357.818
+margin_right = 683.58
+margin_bottom = 382.818
+custom_fonts/font = ExtResource( 3 )
+text = "Press ESC tu continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 25.1985
+margin_top = 20.1588
+margin_right = 226.198
+margin_bottom = 62.1588
 custom_fonts/font = ExtResource( 1 )
 text = "Lives: 3"
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

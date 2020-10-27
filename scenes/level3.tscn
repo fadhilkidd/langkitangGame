@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tilesets/castle.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/main_char.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Life Counter.tscn" type="PackedScene" id=3]
+
+[node name="level3" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 3 )]

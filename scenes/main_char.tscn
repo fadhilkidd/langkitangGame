@@ -86,14 +86,19 @@ animations = [ {
 "name": "lompat",
 "speed": 15.0
 }, {
+"frames": [ ExtResource( 24 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": false,
+"name": "mendarat",
+"speed": 15.0
+}, {
 "frames": [ ExtResource( 50 ), ExtResource( 13 ), ExtResource( 57 ), ExtResource( 26 ), ExtResource( 51 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 52 ), ExtResource( 21 ), ExtResource( 45 ), ExtResource( 15 ), ExtResource( 59 ), ExtResource( 27 ), ExtResource( 38 ), ExtResource( 28 ) ],
 "loop": false,
 "name": "mati",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 61 ), ExtResource( 73 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 3 ), ExtResource( 54 ), ExtResource( 64 ), ExtResource( 42 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 36 ), ExtResource( 63 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 62 ), ExtResource( 17 ), ExtResource( 53 ) ],
 "loop": true,
-"name": "diam",
+"name": "jalan",
 "speed": 20.0
 }, {
 "frames": [ ExtResource( 49 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 46 ), ExtResource( 58 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 29 ) ],
@@ -101,15 +106,10 @@ animations = [ {
 "name": "lari",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 3 ), ExtResource( 54 ), ExtResource( 64 ), ExtResource( 42 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 36 ), ExtResource( 63 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 62 ), ExtResource( 17 ), ExtResource( 53 ) ],
+"frames": [ ExtResource( 61 ), ExtResource( 73 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "jalan",
+"name": "diam",
 "speed": 20.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 70 ) ],
-"loop": false,
-"name": "mendarat",
-"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
