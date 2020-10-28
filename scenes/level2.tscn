@@ -35,13 +35,13 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="EnemyArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2523.02, 1753.29 )
+position = Vector2( 2528.68, 1470.45 )
 
 [node name="EnemyArea2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 8467.1, 1796.05 )
+position = Vector2( 8467.1, 1456.64 )
 
 [node name="HitArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 5316.88, 2081.14 )
+position = Vector2( 5328.19, 1464.54 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -61,3 +61,6 @@ position = Vector2( 8174.36, 1160.44 )
 
 [node name="EnemyArea3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 13395.4, -1176.63 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 8010.09, -373.352 )
