@@ -1,5 +1,6 @@
-extends Label
+extends Node2D
 
 func _process(delta):
-	self.text = "Lives : " + str(Global.lives)
+	$LifeCounter.text = "Lives : " + str(Global.lives)
+	$Companion.text = "Companion: " + str(Global.companion)
 

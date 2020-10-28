@@ -49,14 +49,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 25.1985
-margin_top = 20.1588
-margin_right = 226.198
-margin_bottom = 62.1588
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 25.1985, 20.1588 )
+script = ExtResource( 2 )
+
+[node name="LifeCounter" type="Label" parent="Node2D"]
+margin_right = 201.0
+margin_bottom = 42.0
 custom_fonts/font = ExtResource( 1 )
 text = "Lives: 3"
-script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Companion" type="Label" parent="Node2D"]
+margin_left = 1.5874
+margin_top = 47.622
+margin_right = 343.587
+margin_bottom = 89.622
+custom_fonts/font = ExtResource( 1 )
+text = "Companion: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

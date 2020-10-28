@@ -53,20 +53,7 @@ func get_input():
 		$AnimatedSprite.play(animation)
 
 func _physics_process(delta):
-	#if Input.is_key_pressed(KEY_ESCAPE):
-	#	if Global.is_paused == true:
-	#		Global.is_paused = false
-	#		velocity.y = currentFallSpeed
-	#	else:
-	#		Global.is_paused = true
-		
-		
-	if Global.is_paused:
-		currentFallSpeed = velocity.y
-		velocity.x = 0
-		velocity.y = 0
-		
-	if is_dead == false and Global.is_paused == false:
+	if is_dead == false:
 		velocity.y += delta * GRAVITY
 		get_input()
 		velocity = move_and_slide(velocity, UP)
