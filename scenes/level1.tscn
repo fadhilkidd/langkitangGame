@@ -55,7 +55,10 @@ position = Vector2( 9748.63, 2515.96 )
 position = Vector2( 14575.1, 2515.19 )
 
 [node name="Friend" parent="." instance=ExtResource( 7 )]
-position = Vector2( 669.286, 240.724 )
+position = Vector2( 14634.9, 2043.61 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 16.818, -104.271 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 699.626, 67.2717 )
