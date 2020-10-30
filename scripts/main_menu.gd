@@ -10,4 +10,7 @@ func _on_load_game_btn_pressed():
 
 
 func _on_BackToMainMenu_pressed():
+	Global.lives = 3
+	Global.switches = 0
+	Global.companion = 0
 	get_tree().change_scene(str("res://scenes/" + "Main Menu" + ".tscn"))

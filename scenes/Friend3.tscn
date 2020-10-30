@@ -17,17 +17,17 @@ region = Rect2( 80, 110, 80, 110 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 160, 0, 80, 110 )
+region = Rect2( 400, 220, 80, 110 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 320, 0, 80, 110 )
+region = Rect2( 160, 0, 80, 110 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 400, 220, 80, 110 )
+region = Rect2( 320, 0, 80, 110 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -36,14 +36,14 @@ animations = [ {
 "name": "jalan",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "takut",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "berdiri",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "takut",
 "speed": 5.0
 } ]
 
@@ -51,14 +51,14 @@ animations = [ {
 extents = Vector2( 24.5, 42.5 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 70.5, 51 )
+extents = Vector2( 38, 42.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
-animation = "berdiri"
+animation = "takut"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.5, 12 )
@@ -84,3 +84,4 @@ shape = SubResource( 8 )
 
 [node name="successAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

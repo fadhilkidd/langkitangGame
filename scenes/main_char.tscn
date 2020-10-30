@@ -81,6 +81,16 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 3 ), ExtResource( 54 ), ExtResource( 64 ), ExtResource( 42 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 36 ), ExtResource( 63 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 62 ), ExtResource( 17 ), ExtResource( 53 ) ],
+"loop": true,
+"name": "jalan",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 61 ), ExtResource( 73 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "diam",
+"speed": 20.0
+}, {
 "frames": [ ExtResource( 65 ), ExtResource( 66 ), ExtResource( 6 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 23 ) ],
 "loop": false,
 "name": "lompat",
@@ -100,16 +110,6 @@ animations = [ {
 "loop": false,
 "name": "mati",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 3 ), ExtResource( 54 ), ExtResource( 64 ), ExtResource( 42 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 36 ), ExtResource( 63 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 62 ), ExtResource( 17 ), ExtResource( 53 ) ],
-"loop": true,
-"name": "jalan",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 61 ), ExtResource( 73 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 74 ), ExtResource( 55 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 12 ), ExtResource( 40 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "diam",
-"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -140,6 +140,7 @@ zoom = Vector2( 1.5, 1.5 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 78 )
+autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
