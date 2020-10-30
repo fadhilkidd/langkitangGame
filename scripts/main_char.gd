@@ -32,19 +32,19 @@ func get_input():
 		if Input.is_key_pressed(KEY_SHIFT) and Input.is_action_pressed("ui_left"):
 			animation = "lari"
 			speed = 500
-	if Global.reincarnate == true:
-		if is_on_floor() and Input.is_key_pressed(KEY_SHIFT) and Input.is_action_just_pressed('ui_up'):
-			jump_speed = -700
-			velocity.y = jump_speed
-			$JumpSound.play()
-		elif is_on_floor() and Input.is_action_just_pressed('ui_up'):
-			velocity.y = jump_speed
-			$JumpSound.play()
-	if (not is_on_floor()) and Input.is_action_just_released("ui_up") and doubleJump == 0:
-		doubleJump = 1
-	if Input.is_action_just_pressed("ui_up") and doubleJump == 1:
+	if is_on_floor() and Input.is_key_pressed(KEY_SHIFT) and Input.is_action_just_pressed('ui_up'):
+		jump_speed = -700
 		velocity.y = jump_speed
-		doubleJump = 2
+		$JumpSound.play()
+	elif is_on_floor() and Input.is_action_just_pressed('ui_up'):
+		velocity.y = jump_speed
+		$JumpSound.play()
+	if Global.reincarnate == false:
+		if (not is_on_floor()) and Input.is_action_just_released("ui_up") and doubleJump == 0:
+			doubleJump = 1
+		if Input.is_action_just_pressed("ui_up") and doubleJump == 1:
+			velocity.y = jump_speed
+			doubleJump = 2
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += speed
 	if Input.is_action_pressed("ui_left"):
