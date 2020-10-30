@@ -39,7 +39,7 @@ func get_input():
 	elif is_on_floor() and Input.is_action_just_pressed('ui_up'):
 		velocity.y = jump_speed
 		$JumpSound.play()
-	if Global.reincarnate == false:
+	if Global.reincarnate == true:
 		if (not is_on_floor()) and Input.is_action_just_released("ui_up") and doubleJump == 0:
 			doubleJump = 1
 		if Input.is_action_just_pressed("ui_up") and doubleJump == 1:
