@@ -61,6 +61,9 @@ func _physics_process(delta):
 		
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
+				if "roof" in get_slide_collision(i).collider.name:
+					dead()
+					reincarnate()
 				if "Enemy" in get_slide_collision(i).collider.name:
 					Global.lives -= 1
 					dead()
@@ -68,7 +71,10 @@ func _physics_process(delta):
 						real_dead()
 					else:
 						temporary_dead()
-		
+						
+func reincarnate():
+	$Timer3.start()
+
 func dead():
 	is_dead = true
 	$AnimatedSprite.play("mati")
@@ -99,3 +105,8 @@ func _on_Timer2_timeout():
 	Global.current_scene = get_tree().get_current_scene().get_name()
 	get_tree().change_scene(str("res://scenes/" + Global.current_scene + ".tscn"))
 	#get_tree().change_scene(str("res://scenes/TryAgain.tscn"))
+
+
+func _on_Timer3_timeout():
+	Global.reincarnate = true
+	get_tree().change_scene(str("res://scenes/" + "GameOver" + ".tscn"))

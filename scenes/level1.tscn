@@ -123,6 +123,13 @@ texture = ExtResource( 20 )
 position = Vector2( -7722.24, 496.621 )
 shape = SubResource( 3 )
 
+[node name="Label" type="Label" parent="Area2D3"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Figuran" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Figuran"]

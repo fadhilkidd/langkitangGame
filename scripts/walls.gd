@@ -8,3 +8,5 @@ func _process(delta):
 		$TileMap1.clear()
 	if Global.switches == 3:
 		$TileMap2.clear()
+	if Global.switches == 4:
+		$TileMap.clear()
