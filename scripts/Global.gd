@@ -8,3 +8,4 @@ var reincarnate = false
 var wilreincarnate = false
 var movetheroof = false
 var trapOn = false
+var shouldDie = false

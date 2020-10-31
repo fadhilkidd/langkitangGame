@@ -77,16 +77,23 @@ func _physics_process(delta):
 			Global.companion = 0
 			dead()
 			reincarnate()
+			
+		if Global.shouldDie:
+			harusnyaMati()
 		
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
 				if "Enemy" in get_slide_collision(i).collider.name:
-					Global.lives -= 1
-					dead()
-					if Global.lives == 0:
-						real_dead()
-					else:
-						temporary_dead()
+					Global.shouldDie = true
+
+func harusnyaMati():
+	Global.lives -= 1
+	Global.shouldDie = false
+	dead()
+	if Global.lives == 0:
+		real_dead()
+	else:
+		temporary_dead()
 						
 func reincarnate():
 	$Timer3.start()
@@ -121,6 +128,7 @@ func _on_Timer2_timeout():
 	Global.switches = 0
 	Global.companion = companionNow
 	Global.current_scene = get_tree().get_current_scene().get_name()
+	Global.shouldDie = false
 	get_tree().change_scene(str("res://scenes/" + Global.current_scene + ".tscn"))
 
 
@@ -130,4 +138,5 @@ func _on_Timer3_timeout():
 	Global.reincarnate = true
 	Global.trapOn = false
 	Global.wilreincarnate = false
+	Global.shouldDie = false
 	get_tree().change_scene(str("res://scenes/" + "beforereincarnate" + ".tscn"))

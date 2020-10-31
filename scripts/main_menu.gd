@@ -17,3 +17,7 @@ func _on_BackToMainMenu_pressed():
 	Global.reincarnate = false
 	Global.wilreincarnate = false
 	get_tree().change_scene(str("res://scenes/" + "Main Menu" + ".tscn"))
+
+
+func _on_exit_btn2_pressed():
+	get_tree().quit()

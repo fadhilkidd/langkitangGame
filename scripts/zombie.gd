@@ -26,6 +26,11 @@ func _physics_process(delta):
 	
 	if $AnimatedSprite.animation != animation:
 		$AnimatedSprite.play(animation)
+		
+	if get_slide_count() > 0:
+		for i in range(get_slide_count()):
+			if "Player" in get_slide_collision(i).collider.name:
+				Global.shouldDie = true
 	
 func _process(delta):
 	if velocity.x > 0:
