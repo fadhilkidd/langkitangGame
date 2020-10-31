@@ -13,4 +13,7 @@ func _on_BackToMainMenu_pressed():
 	Global.lives = 5
 	Global.switches = 0
 	Global.companion = 0
+	Global.trapOn = false
+	Global.reincarnate = false
+	Global.wilreincarnate = false
 	get_tree().change_scene(str("res://scenes/" + "Main Menu" + ".tscn"))
