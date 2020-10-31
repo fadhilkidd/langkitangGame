@@ -88,7 +88,7 @@ margin_bottom = 149.384
 custom_fonts/font = ExtResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Why can't I have any
-friend like others?"
+friend like them?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -260,7 +260,7 @@ position = Vector2( 11772.5, 692.899 )
 position = Vector2( 13448.3, 798.595 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -5667.04, -76.6948 )
+position = Vector2( -5681.39, -104.131 )
 
 [node name="Label" type="Label" parent="."]
 visible = false
