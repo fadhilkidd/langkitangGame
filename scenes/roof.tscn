@@ -4,14 +4,16 @@
 [ext_resource path="res://scripts/roof.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 514.565, 35.8018 )
+extents = Vector2( 552.148, 36.4901 )
 
 [node name="roof" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 26.727, 0.8909 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 25.8361, 0 )
+scale = Vector2( 0.858787, 0.8 )
 texture = ExtResource( 1 )

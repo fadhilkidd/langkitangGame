@@ -57,7 +57,7 @@ shape = SubResource( 1 )
 script = ExtResource( 10 )
 
 [node name="roof2" parent="Area2D2" instance=ExtResource( 7 )]
-position = Vector2( -6324.69, -1290.13 )
+position = Vector2( -6347.32, -1318.41 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( -5583.23, -831.383 )
@@ -94,7 +94,7 @@ tile_data = PoolIntArray( -1441808, 26, 0, -1441807, 26, 0, -1441806, 26, 0, -14
 position = Vector2( 5144.91, 364.867 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 26.1348, -46.5978 )
+position = Vector2( 43.9839, -62.6422 )
 
 [node name="RigidBody2D" type="Node2D" parent="."]
 script = ExtResource( 8 )
