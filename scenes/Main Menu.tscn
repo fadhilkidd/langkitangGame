@@ -23,15 +23,15 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 294.607
-margin_top = 96.3571
-margin_right = 761.607
-margin_bottom = 216.357
+margin_left = 193.045
+margin_top = 115.957
+margin_right = 901.045
+margin_bottom = 235.957
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 0.690196, 0.427451, 1 )
 custom_colors/font_outline_modulate = Color( 1, 0.670588, 0.47451, 1 )
 custom_colors/font_color_shadow = Color( 0.447059, 0.352941, 0.262745, 1 )
-text = "Langkitang"
+text = "Boy named Kind"
 __meta__ = {
 "_edit_use_anchors_": false
 }
