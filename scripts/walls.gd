@@ -10,3 +10,7 @@ func _process(delta):
 		$TileMap2.clear()
 	if Global.switches == 4:
 		$TileMap.clear()
+	if Global.switches == 5:
+		$TileMap4.clear()
+	if Global.trapOn == true:
+		$TileMap5.clear()

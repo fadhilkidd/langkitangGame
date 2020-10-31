@@ -11,11 +11,15 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 func _input(event):
-	if Input.is_action_just_pressed("enter"):
-		var bodies  = $Detector.get_overlapping_bodies()
-		for body in bodies:
-			if body.name == "Player" and saved == false:
-				saved()
+	if Global.reincarnate == false:
+		if Input.is_action_just_pressed("enter"):
+			var bodies  = $Detector.get_overlapping_bodies()
+			for body in bodies:
+				if body.name == "Player" and saved == false:
+					saved()
+	else:
+		self.visible = false
+		$CollisionShape2D.disabled = true
 
 func saved():
 	saved = true

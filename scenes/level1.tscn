@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://tilesets/autumn_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/main_char.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://tilesets/house.tres" type="TileSet" id=18]
 [ext_resource path="res://assets/elements/Default/house1.png" type="Texture" id=19]
 [ext_resource path="res://assets/elements/Default/castleSmall.png" type="Texture" id=20]
+[ext_resource path="res://scripts/double_jump_script.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 88.9658, 106.223 )
@@ -260,6 +261,21 @@ position = Vector2( 13448.3, 798.595 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -5667.04, -76.6948 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -5548.05
+margin_top = 308.226
+margin_right = -5301.05
+margin_bottom = 361.226
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Now you can do
+double jump"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="rumah hijau" to="rumah hijau" method="_on_rumah_hijau_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_house2_entered"]

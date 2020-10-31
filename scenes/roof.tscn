@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/roof.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 507.099, 33.697 )
+extents = Vector2( 514.565, 35.8018 )
 
 [node name="roof" type="KinematicBody2D"]
 script = ExtResource( 2 )

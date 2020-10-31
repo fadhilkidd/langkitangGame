@@ -52,14 +52,14 @@ __meta__ = {
 }
 
 [node name="load_game_btn" type="LinkButton" parent="."]
-margin_left = 387.448
-margin_top = 341.458
-margin_right = 758.448
-margin_bottom = 397.458
+margin_left = 364.285
+margin_top = 339.676
+margin_right = 735.285
+margin_bottom = 395.676
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.647059, 0.447059, 0.0156863, 1 )
 toggle_mode = true
-text = "Load Game"
+text = "How to Play"
 underline = 1
 script = ExtResource( 4 )
 __meta__ = {

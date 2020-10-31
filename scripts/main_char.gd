@@ -12,8 +12,10 @@ var velocity = Vector2()
 var animation = "diam"
 
 var is_dead = false
+var songplayed = false
 
 var currentFallSpeed
+var companionNow = Global.companion
 
 func get_input():
 	velocity.x = 0
@@ -54,16 +56,30 @@ func get_input():
 		$AnimatedSprite.play(animation)
 
 func _physics_process(delta):
+	if songplayed == false:
+		var scenenow = get_tree().get_current_scene().get_name()
+		if scenenow == "level2":
+			songplayed = true
+			$level2.play()
+		if scenenow == "level1":
+			songplayed = true
+			$level1.play()
+		if scenenow == "level3":
+			songplayed = true
+			$level3.play()
+
 	if is_dead == false:
 		velocity.y += delta * GRAVITY
 		get_input()
 		velocity = move_and_slide(velocity, UP)
 		
+		if Global.wilreincarnate:
+			Global.companion = 0
+			dead()
+			reincarnate()
+		
 		if get_slide_count() > 0:
 			for i in range(get_slide_count()):
-				if "roof" in get_slide_collision(i).collider.name:
-					dead()
-					reincarnate()
 				if "Enemy" in get_slide_collision(i).collider.name:
 					Global.lives -= 1
 					dead()
@@ -102,11 +118,14 @@ func _on_Timer_timeout():
 
 
 func _on_Timer2_timeout():
+	Global.switches = 0
+	Global.companion = companionNow
 	Global.current_scene = get_tree().get_current_scene().get_name()
 	get_tree().change_scene(str("res://scenes/" + Global.current_scene + ".tscn"))
-	#get_tree().change_scene(str("res://scenes/TryAgain.tscn"))
 
 
 func _on_Timer3_timeout():
+	Global.lives = 5
 	Global.reincarnate = true
-	get_tree().change_scene(str("res://scenes/" + "GameOver" + ".tscn"))
+	Global.wilreincarnate = false
+	get_tree().change_scene(str("res://scenes/" + "beforereincarnate" + ".tscn"))

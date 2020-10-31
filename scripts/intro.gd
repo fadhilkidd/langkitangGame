@@ -20,7 +20,6 @@ func _on_rumah_hijau_body_entered(body):
 		if Global.reincarnate:
 			get_tree().change_scene(str("res://scenes/" + "level3" + ".tscn"))
 		elif Global.companion < 1:
-			print("kalau ini?")
 			$Label6.visible = true
 		else:
 			get_tree().change_scene(str("res://scenes/" + "level2" + ".tscn"))

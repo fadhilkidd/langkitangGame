@@ -1,8 +1,10 @@
 extends Node
 
-var lives = 3
-var companion = 0
+var lives = 5
+var companion = 2
 var current_scene = ""
-var switches = 0
+var switches = 3
 var reincarnate = false
+var wilreincarnate = false
 var movetheroof = false
+var trapOn = false

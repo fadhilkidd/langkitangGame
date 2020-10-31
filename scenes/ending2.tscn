@@ -1,0 +1,150 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/ending_textsgd.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Kecil.tres" type="DynamicFont" id=3]
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0862745, 0.0823529, 0.0823529, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 316.371
+margin_top = 62.0365
+margin_right = 724.371
+margin_bottom = 149.036
+custom_fonts/font = ExtResource( 3 )
+text = "Friends might not always
+be there"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+margin_left = 272.274
+margin_top = 135.112
+margin_right = 769.274
+margin_bottom = 222.112
+custom_fonts/font = ExtResource( 3 )
+text = "but that doesn't mean 
+we should stop having friends"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = 172.74
+margin_top = 210.707
+margin_right = 903.74
+margin_bottom = 297.707
+custom_fonts/font = ExtResource( 3 )
+text = "it doesn't mean we should ignore them
+or let them suffer by not helping them"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+margin_left = 180.3
+margin_top = 292.602
+margin_right = 911.3
+margin_bottom = 379.602
+custom_fonts/font = ExtResource( 3 )
+text = "Cuz maybe they didn't don't want to help.
+but they just cant."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 191.74
+margin_top = 366.141
+margin_right = 867.74
+margin_bottom = 441.141
+custom_fonts/font = ExtResource( 3 )
+text = "after all, friend is too precious to be
+ defined as someone we ask for help"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+visible = false
+margin_left = 192.0
+margin_top = 445.26
+margin_right = 868.0
+margin_bottom = 494.26
+custom_fonts/font = ExtResource( 3 )
+text = "friend is \"langkitang\""
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+visible = false
+margin_left = 193.26
+margin_top = 491.877
+margin_right = 869.26
+margin_bottom = 544.877
+custom_fonts/font = ExtResource( 3 )
+text = "and, it have never been so
+wrong to help each other, rite?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer4" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer5" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer6" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer7" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer8" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer1_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_Timer4_timeout"]
+[connection signal="timeout" from="Timer5" to="." method="_on_Timer5_timeout"]
+[connection signal="timeout" from="Timer6" to="." method="_on_Timer6_timeout"]
+[connection signal="timeout" from="Timer7" to="." method="_on_Timer7_timeout"]
+[connection signal="timeout" from="Timer8" to="." method="_on_Timer8_timeout"]
