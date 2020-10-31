@@ -3,7 +3,7 @@ extends Area2D
 var isopen = false
 
 func _process(delta):
-	if not isopen:
+	if not isopen and Global.reincarnate == false:
 		if Global.switches == 4:
 			$Label.visible = true
 			$Sprite1.visible = true

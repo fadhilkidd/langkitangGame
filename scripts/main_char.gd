@@ -126,6 +126,8 @@ func _on_Timer2_timeout():
 
 func _on_Timer3_timeout():
 	Global.lives = 5
+	Global.switches = 0
 	Global.reincarnate = true
+	Global.trapOn = false
 	Global.wilreincarnate = false
 	get_tree().change_scene(str("res://scenes/" + "beforereincarnate" + ".tscn"))

@@ -76,7 +76,7 @@ margin_right = 867.74
 margin_bottom = 441.141
 custom_fonts/font = ExtResource( 3 )
 text = "after all, friend is too precious to be
- defined as someone we ask for help"
+ defined as someone we ask for help, right?"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,7 +89,7 @@ margin_top = 445.26
 margin_right = 868.0
 margin_bottom = 494.26
 custom_fonts/font = ExtResource( 3 )
-text = "friend is \"langkitang\""
+text = "However,"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -102,14 +102,15 @@ margin_top = 491.877
 margin_right = 869.26
 margin_bottom = 544.877
 custom_fonts/font = ExtResource( 3 )
-text = "and, it have never been so
-wrong to help each other, rite?"
+text = "it has never been so
+wrong to help each other"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 one_shot = true
 autostart = true
 

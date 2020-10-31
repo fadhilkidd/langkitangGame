@@ -94,7 +94,7 @@ tile_data = PoolIntArray( -1441808, 26, 0, -1441807, 26, 0, -1441806, 26, 0, -14
 position = Vector2( 5144.91, 364.867 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 62.0535, -73.537 )
+position = Vector2( 26.1348, -46.5978 )
 
 [node name="RigidBody2D" type="Node2D" parent="."]
 script = ExtResource( 8 )
@@ -229,7 +229,7 @@ __meta__ = {
 script = ExtResource( 24 )
 
 [node name="Collision" type="CollisionShape2D" parent="friendlast2"]
-position = Vector2( -1202.35, -527.312 )
+position = Vector2( -2049.92, -529.431 )
 shape = SubResource( 3 )
 
 [node name="Sprite1" type="Sprite" parent="friendlast2"]

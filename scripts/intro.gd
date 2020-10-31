@@ -4,6 +4,8 @@ extends Area2D
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == 'Player':
+		if Global.reincarnate:
+			$Label.text = "no. i dont need\nany friend"
 		$Label.visible = true
 
 func _on_house2_entered(body):
